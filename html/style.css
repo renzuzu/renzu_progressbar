@@ -1,0 +1,174 @@
+body {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 22px;
+  margin: 15px auto;
+  width: 96%;
+  color: #fff;
+  overflow: hidden;
+}
+
+.author {
+  font-size: 16px;
+  color: #fcaf17;
+}
+
+.circlePercent {
+  position: relative;
+  top: 70%;
+  bottom: unset;
+  left: 45%;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: orange;
+}
+
+.circlePercent:before,
+.circlePercent > .progressEnd {
+  position: absolute;
+  z-index: 3;
+  top: 2px;
+  left: 45px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgb(37, 255, 200);
+  -ms-transform-origin: 3px 46px;
+  transform-origin: 3px 46px;
+  content: "";
+}
+
+.circlePercent:after,
+.circlePercent > .progress {
+  position: absolute;
+  -ms-transform-origin: 48px 48px;
+  transform-origin: 48px 48px;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 96px;
+  border-radius: 48px 0 0 48px;
+  background: orange;
+  content: "";
+}
+
+.circlePercent.fiftyPlus:after {
+  background: rgb(83, 252, 91);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.circlePercent > .progress.progress {
+  background: rgb(61, 238, 141);
+}
+
+.circlePercent > .counter {
+  position: absolute;
+  box-sizing: border-box;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+  margin-top: -2px;
+  margin-left: -2px;
+  border-radius: 50%;
+  border: 4px solid rgb(0, 95, 236);
+}
+
+.circlePercent > .counter:before {
+  position: absolute;
+  z-index: 1;
+  top: 72%;
+  margin-top: -13px;
+  width: 100%;
+  height: 26px;
+  font-size: 14px;
+  line-height: 26px;
+  font-family: sans-serif;
+  text-align: center;
+  color: white;
+  content: attr(data-percent) "%";
+}
+
+.circlePercent > .counter:after {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 6px;
+  left: 6px;
+  border-radius: 50%;
+  background: rgb(19, 19, 19);
+  content: "";
+}
+
+.circlePercent > .counter[data-percent="100"] {
+  background: rgb(32, 255, 125);
+}
+
+.figure {
+  position: absolute;
+  top: 8px;
+  right: 25px;
+  font-size: 42px;
+  z-index: 9999;
+  font-weight: 600;
+  color: #fff;
+}
+
+@media only screen and (min-width:601px) {
+  .title {
+    display: block;
+    margin-right: 150px;
+  }
+  .author {
+    float: right;
+    width: 250px;
+    line-height: 32px;
+  }
+  .lt {
+    display: none;
+  }
+}
+
+@media only screen and (min-width:511px) and (max-width:600px) {
+  .title,
+  .author {
+    display: block;
+    text-align: center;
+  }
+  .author {
+    margin-top: 5px;
+    line-height: 26px;
+  }
+  .lt {
+    display: block;
+  }
+  .rt {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:510px) {
+  .title,
+  .author {
+    display: block;
+    text-align: center;
+  }
+  .author {
+    margin-top: 5px;
+    line-height: 26px;
+  }
+  .lt {
+    display: block;
+  }
+  .rt {
+    display: none;
+  }
+}
+
+
+/* general css: ends */
